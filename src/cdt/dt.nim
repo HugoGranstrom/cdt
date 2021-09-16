@@ -197,10 +197,10 @@ proc xlocatePoint(p: Vector; startEdge: Edge): Edge =
   return e
 
 type
-  LocPos = enum
+  LocPos* = enum
     lpOrg, lpDest, lpEdge, lpFace
 
-proc locatePoint(this: DelaunayTriangulation; p: Vector; startEdge: Edge = nil): (Edge, LocPos) =
+proc locatePoint*(this: DelaunayTriangulation; p: Vector; startEdge: Edge = nil): (Edge, LocPos) =
   var e = startEdge
   if e == nil:
     e = this.getStartVertex(p.x, p.y).edge
