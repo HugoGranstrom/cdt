@@ -30,7 +30,7 @@ type
   Edge* = ref object
     quadEdge*: QuadEdge
     vertex*: Vertex
-    next*{.cursor.}: Edge # added {.cursor.} for v 0.1.1
+    next*: Edge
     num*: int # 0 .. 3
 
 proc `$`*(v: Vertex): string =
