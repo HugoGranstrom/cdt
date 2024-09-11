@@ -7,12 +7,12 @@
 #
 # https://static.aminer.org/pdf/PDF/000/111/347/fast_randomized_point_location_without_preprocessing_in_two_and_three.pdf
 #
-# (C) 2019 S. Salewski 
+# (C) 2019 S. Salewski
 # v0.1 26-MAY-2019
 
 import geometry
 import types, vectors, vertices, edges, subdivisions, salewski, minmax
-import tables, random
+import std / [tables, random]
 from math import sqrt, pow
 from salewski import `^`
 

@@ -1,5 +1,5 @@
 # http://www.karlchenofhell.org/cppswp/lischinski.pdf
-import random, tables
+import std / [random, tables]
 import types, vectors, vertices, edges
 
 type
@@ -50,7 +50,7 @@ proc removeVertex*(s: var Subdivision; v: Vertex) =
       if edge == start:
         break
   assert s.vertices[v.id.int] == v
-  let delPos = v.seqPos 
+  let delPos = v.seqPos
   let id = s.vertIDs[^1].int
   let v1 = s.vertices[id]
   assert v1 != nil
